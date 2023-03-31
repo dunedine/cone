@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>Document</title>
+    <style>
+                /* 이서윤체 폰트 적용을 위한 코드 */
+                @font-face {
+          font-family: "LeeSeoyun";
+          src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+            format("woff");
+          font-weight: normal;
+          font-style: normal;
+        }
+        /* body태그 자체에 css 요소 부여 */
+        body {
+            font-family: "LeeSeoyun";
+            margin: 0; 
+            display: flex;
+            justify-content: center;
+            background-image: url("C:\www1\crawling\static\img\background.png");
+        }
+        .container {
+            background-color: whitesmoke;
+        }
+        .welcome-header {
+            margin-top: 90px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 600;
+        }
+        .welcome-header__title {
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+        .welcome-header__text {
+            width: 100%;
+            opacity: 0.7;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="welcome-header">
+            <h1 class="welcome-header__title">코딩네컷</h1>
+            <p class="welcome-header__text">
+                원하는 당신만의 네컷을 만들어보세요
+            </p>
+          </header>
+          <hr>
+        <label style="color:darkblue">이미지검색</label>
+        <form action="/scrap" method="get" name="search">
+        <input type="text" name="word" style="width: 240px;">
+        <input type="submit" value="검색">
+        </form>
+    </div>
+</body>
+</html>
